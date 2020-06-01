@@ -1,0 +1,44 @@
+% Author: Y.Galanakis
+% W: ygalanak.github.io
+% Date: June 2020
+%-------------------------------------------------------
+% !TeX program = lualatex
+
+\documentclass[12pt,letterpaper]{article}
+\usepackage{YGTemplate}
+\usepackage{lipsum} % only for illustration purposes here
+
+
+% Title
+%-------------------------------------------------------
+\title{Title\thanks{\textbf{Acknowledgements:} tbc. }}
+\author{My Name\thanks{\textbf{Correspondence:} My Name, My Dept, Address; E: \href{mailto:myname@google.com}{myname@google.com}} \\ \small University and Other Affiliations}
+\date{\small \monthyeardate \today}
+
+% Main document
+%------------------------------------------------------
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+	\lipsum[1]
+\end{abstract}
+
+\input{Sections/intro}
+\input{Sections/litreview}
+\input{Sections/methodology}
+\input{Sections/results}
+\input{Sections/conclusion}
+
+\newpage
+\bibliographystyle{econ}
+{\small \bibliography{myreferences}}
+
+\newpage
+\begin{appendix}
+\counterwithin{figure}{section}
+\counterwithin{table}{section}
+\input{Appendix/blah.tex}
+\end{appendix}
+\end{document}

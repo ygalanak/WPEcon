@@ -1,0 +1,61 @@
+% Author: Y.Galanakis
+% W: ygalanak.github.io
+% Date: June 2020
+%-------------------------------------------------------
+\ProvidesPackage{YGTemplate}
+\usepackage{fontspec}
+\usepackage[english]{babel}
+%\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{a4wide}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{caption, subcaption}
+\usepackage{fnpct}
+\usepackage{kpfonts}    % for nice fonts
+\usepackage{tikz,pgfplots,pgfplotstable}
+\usepackage{fontawesome}
+\usepackage{psfrag}
+\usetikzlibrary{intersections,patterns,pgfplots.fillbetween}
+\usetikzlibrary{decorations.pathreplacing}
+\usepackage{booktabs}   % for nice tables
+\usepackage{bm}         % for bold math
+\usepackage{rotating}
+\definecolor{MyBlue}{rgb}{0,0,0.3}
+\definecolor{MyRed}{rgb}{0.4,0,0.1}
+\definecolor{MyGreen}{rgb}{0,0.4,0}
+\usepackage[bookmarks=true,bookmarksnumbered=true,colorlinks=true,linkcolor=MyBlue,citecolor=MyRed,filecolor=MyBlue,urlcolor=MyGreen]{hyperref}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{natbib}
+\usepackage{paralist}
+\usepackage{multicol}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{lscape}
+\usepackage{chngcntr}
+\usepackage[hang,flushmargin]{footmisc}
+\usepackage{datetime}
+\usepackage{threeparttable} 
+\usepackage{diagbox}
+\newdateformat{monthyeardate}{%
+  \monthname[\THEMONTH], \THEYEAR}
+
+\newcounter{ltfootnote}
+\renewcommand{\theltfootnote}{\alph{ltfootnote}}
+\makeatletter
+\newenvironment{ltfootnotes}
+ {\let\c@footnote\c@ltfootnote
+  \let\thefootnote\theltfootnote
+  \setcounter{ltfootnote}{0}}
+ {}
+\makeatother
+
+\DeclareCaptionFont{MyBlue}{\color{MyBlue}}
+\captionsetup{
+	labelfont={bf,MyBlue},
+}
+
+\usepackage{sectsty}
+\sectionfont{\color{MyBlue}}  % sets colour of sections
+\subsectionfont{\color{MyBlue}}  
